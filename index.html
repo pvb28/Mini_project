@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Bar</title>
+<link rel="stylesheet" type="text/css" href="nav.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+<body id="main">
+	<nav>
+			<img src="" width=200 height=80>
+		<ul>
+			<li id="home"><a href="#">Home</a></li>
+			<li id="admin"><a href="#">Administration</a></li>
+			<li id="librarian"><a href="#">Librarian</a></li>
+			
+		</ul>	
+	</nav>
+	<div>
+		<div  id="div1">
+				Library Management
+				<br>System
+		</div>
+		<div id="div2">
+			enter admin details:<input type="text">
+			<br>password:<input type="password">
+		</div>
+		<div id="div3">
+				enter librarian details:<input type="text">
+		</div>
+	</div>
+  <script>
+$(document).ready(function(){
+	$("#admin").click(function(){
+		$("#div1").css("display","none");
+		$("#div3").css("display","none");
+		$("#div2").css("display","block");
+	});
+	$("#home").click(function(){
+		$("#div2").css("display","none");
+		$("#div3").css("display","none");
+		$("#div1").css("display","block");
+	});
+	$("#librarian").click(function(){
+		$("#div2").css("display","none");
+		$("#div1").css("display","none");
+		$("#div3").css("display","block");
+	});
+}
+);
+</script>
+</body>
+</html>
